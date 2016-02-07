@@ -12,9 +12,15 @@ module.exports = {
 			{
 				loader: 'babel-loader',
 				test: path.join(__dirname, 'src'),
+				exclude: /node_modules/,
 				query: {
 					presets: 'es2015',
 				},
+			},
+			{
+				loader: "eslint-loader",
+				test: /\.js$/,
+				exclude: /node_modules/
 			}
 		]
 	},
