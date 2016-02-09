@@ -4,8 +4,8 @@ var webpack = require('webpack');
 module.exports = {
 	entry: './src/index.js',
 	output: {
-		path: __dirname,
-		filename: 'dist/index.js'
+		path: path.resolve(__dirname, 'dist/js'),
+		filename: 'bundle.js'
 	},
 	module: {
 		preLoaders: [
