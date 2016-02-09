@@ -1,6 +1,7 @@
-.idea
+/.idea/
 .idea/workspace.xml
 /sandbox/
 /.idea/
 /node_modules/
 /dist/
+dev-notes.md

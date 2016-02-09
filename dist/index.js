@@ -126,6 +126,7 @@
 	}();
 
 	exports.default = Calculator;
+	module.exports = exports['default'];
 
 /***/ }
 /******/ ]);

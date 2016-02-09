@@ -4,10 +4,12 @@
   "description": "ES6 Babel6 Webpack Mocha",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:watch": "mocha --compilers js:babel-core/register -w --reporter mocha-unfunk-reporter --colors ./spec/*Spec.js",
+    "test": "mocha --compilers js:babel-core/register --reporter mocha-unfunk-reporter --colors ./spec/*Spec.js",
     "build": "webpack",
     "dev": "webpack -w",
-    "lint": "eslint . --ext .js --ext .es6 || true"
+    "lint": "eslint . --ext .js --ext .es6 || true",
+    "test:build": "webpack 'mocha!./src/index.js' ./dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,16 +25,24 @@
   },
   "homepage": "https://github.com/mikeerickson/cd-boilerplate#readme",
   "devDependencies": {
-    "babel-core": "6.4.5",
+    "babel-core": "6.5.1",
     "babel-eslint": "4.1.8",
     "babel-loader": "6.2.2",
+    "babel-plugin-add-module-exports": "0.1.2",
     "babel-preset-es2015": "6.3.13",
     "chai": "3.5.0",
     "eslint": "1.10.3",
     "eslint-loader": "1.2.1",
+    "eslint-plugin-nodeca": "1.0.3",
     "gulp-messenger": "0.12.0",
+    "mocha": "2.4.5",
+    "mocha-loader": "0.7.1",
+    "mocha-unfunk-reporter": "0.4.0",
     "node-libs-browser": "1.0.0",
-    "webpack": "1.12.13"
+    "webpack": "1.12.13",
+    "webpack-dev-server": "1.14.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-polyfill": "6.5.0"
+  }
 }

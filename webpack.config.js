@@ -8,17 +8,29 @@ module.exports = {
 		filename: 'dist/index.js'
 	},
 	module: {
+		preLoaders: [
+			{
+				test: /\.js$/,
+				loader: "eslint-loader?{rules:{semi:0}}",
+				exclude: /node_modules/
+			}
+		],
 		loaders: [
+			{
+				loader: 'mocha-loader',
+				test: path.join(__dirname, 'spec'),
+				exclude: /node_modules/
+			},
 			{
 				loader: 'babel-loader',
 				test: path.join(__dirname, 'src'),
 				exclude: /node_modules/,
 				query: {
-					presets: 'es2015',
-				},
+					presets: 'es2015'
+				}
 			},
 			{
-				loader: "eslint-loader",
+				loader: 'eslint-loader',
 				test: /\.js$/,
 				exclude: /node_modules/
 			}
@@ -32,6 +44,6 @@ module.exports = {
 		// Nice colored output
 		colors: true
 	},
-	// Create Sourcemaps for the bundle
-	devtool: 'source-map',
+	// Create `sourcemaps` for the bundle
+	devtool: 'source-map'
 };
