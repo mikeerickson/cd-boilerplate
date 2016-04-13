@@ -14,13 +14,13 @@ Released under the MIT license
 
 ### Credits
 
-angular-boilerplate written by Mike Erickson
+cd-boilerplate written by Mike Erickson
 
 E-Mail: [codedungeon@gmail.com](mailto:codedungeon@gmail.com)
 
 Twitter: [@codedungeon](http://twitter.com/codedungeon)
 
-Webiste: [codedungeon.org](http://codedungeon.org)
+Website: [codedungeon.org](http://codedungeon.org)
 
 ***
 

@@ -21,11 +21,12 @@ export default class Calculator {
 
 	divide(value) {
 		this._total = this._total / value
-		return
+		return this
 	}
 
 	reset() {
 		this._total = 0
+		return this
 	}
 
 	total() {

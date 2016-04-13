@@ -11,4 +11,4 @@ console.log('calculator total', myCalc.total())
 
 let myCalc2 = new Calculator(33)
 myCalc2.add(7).subtract(3).multiply(33).divide(2)
-console.log('calcuator total2', myCalc2.total());
+console.log('calculator total2', myCalc2.total());

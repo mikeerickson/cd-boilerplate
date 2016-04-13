@@ -1,5 +1,10 @@
 {
   "port": 4242,
-  "files": ["./dist/**/*.{html,jpg,png,css,js,es6}"],
-  "server": { "baseDir": "./dist" }
+  "files": [
+    "./dist/**/*.{html,jpg,png,css,js,es6}"
+  ],
+  "server": {
+    "baseDir": "./dist"
+  }
 }
+
