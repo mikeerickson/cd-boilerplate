@@ -1,3 +1,5 @@
+/* eslint keyword-spacing:0*/
+
 export default class Calculator {
 
 	constructor(base = null) {
@@ -34,3 +36,4 @@ export default class Calculator {
 	}
 
 }
+
