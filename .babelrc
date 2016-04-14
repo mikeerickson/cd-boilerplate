@@ -1,4 +1,10 @@
+// Using .babelrc to share settings across tools
+// ignore is important, if omitted it will wreak havoc on gulp tsaks
+
 {
-  "presets": ["es2015"],
-  "plugins": ["babel-plugin-add-module-exports"]
+  "presets": ["es2015", "stage-0"],
+  "plugins": ["babel-plugin-add-module-exports"],
+  "ignore": [
+    "node_modules"
+  ]
 }
